@@ -1,0 +1,51 @@
+var equipos = angular.module('equipos', ['ngRoute']);
+ 
+  //definimos las rutas 
+  equipos.config(function($routeProvider) {
+ 
+  $routeProvider.when('/', {
+          templateUrl: 'index.html',
+          controller: index
+          });
+ 
+      //mediante dos puntos (:) definimos un parámetro
+  $routeProvider.when('/Colombia', {
+          templateUrl: 'colombia.html',
+          controller: 'equiposcolombia'
+          }).
+          
+  routeProvider.when('/Costa de marfil', {
+          templateUrl: 'costademarfil.html',
+          controller: 'equiposcostademarfil'
+          });
+          
+  routeProvider.when('/Grecia', {
+          templateUrl: 'grecia.html',
+          controller: 'equiposgrecia'
+          });
+          
+  routeProvider.when('/Japon', {
+          templateUrl: 'japon.html',
+          controller: 'equiposjapon'	
+          });        
+ 
+      //cualquier ruta no definida
+  routeProvider.otherwise({
+          redirectTo: '/'
+          });
+ 
+)};
+equipos.controller('equiposcolombia', function($scope) {
+    
+});
+
+equipos.controller('equiposcostademarfil', function($scope) {
+    
+});
+
+equipos.controller('equiposgrecia', function($scope) {
+    
+});
+equipos.controller('equiposjapon', function($scope) {
+    
+});
